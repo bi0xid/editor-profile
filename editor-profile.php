@@ -40,13 +40,3 @@ function editor_profile_add_caps() {
 add_action( 'admin_init', 'editor_profile_add_caps');
 
 
-// We disable the blocks for editors - editors cannot see blocks that they are not going to use
-function editor_profile_disable_blocks() {
-  $user = wp_get_current_user();
-  if ( in_array( 'editor_profile', (array) $user->roles ) ) {
-    wp_enqueue_script( 'editor_profile_js', plugin_dir_url( __FILE__ ) . '/js/editor_profile.js', array(), '1.0.0', true );
-  }
-}
-add_action( 'admin_enqueue_scripts', 'editor_profile_disable_blocks' );
-
-
