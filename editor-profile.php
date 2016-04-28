@@ -36,7 +36,15 @@ function editor_profile_add_caps() {
     $role->add_cap( 'edit_posts' ); 
     $role->add_cap( 'edit_others_pages' ); 
     $role->add_cap( 'edit_pages' ); 
+    $role->add_cap( 'edit_published_posts' ); 
 }
 add_action( 'admin_init', 'editor_profile_add_caps');
 
 
+function editor_profile_disable_blocks() {
+  $user = wp_get_current_user();
+  if ( in_array( 'editor_profile', (array) $user->roles ) ) {
+    wp_enqueue_script( 'editor_profile_js', plugin_dir_url( __FILE__ ) . '/js/editor_profile.js', array(), '1.0.0', true );
+  }
+}
+add_action( 'admin_enqueue_scripts', 'editor_profile_disable_blocks' );
