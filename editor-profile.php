@@ -3,7 +3,7 @@
  * Plugin Name: Editor Profile
  * Plugin URI: https://wordpress.org/plugins/editor-profile
  * Description: Adds an editor profile that can edit only new posts and pages.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: bi0xid
  * Author URI: http://bi0xid.es
  * License: GPL3
@@ -37,6 +37,7 @@ function editor_profile_add_caps() {
     $role->add_cap( 'edit_others_pages' ); 
     $role->add_cap( 'edit_pages' ); 
     $role->add_cap( 'edit_published_posts' ); 
+    $role->add_cap( 'edit_published_pages' ); 
 }
 add_action( 'admin_init', 'editor_profile_add_caps');
 

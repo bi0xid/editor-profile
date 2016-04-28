@@ -22,6 +22,10 @@ This plugin creates an editor profile that can edit new posts, but cannot edit t
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Allow editor to edit published posts and pages
+* Prevent editor to publish or update in all situations
 
 = 1.0 =
 
