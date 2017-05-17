@@ -13,7 +13,7 @@ This plugin creates an editor profile that can edit new posts, but cannot edit t
 == Description ==
 
 This plugin creates an editor profile that can edit new posts, but cannot edit them after publishing.
-
+ 
 
 == Installation ==
 
